@@ -12,6 +12,7 @@ public class User {
     private Integer id;
     private String username ;
     private String firstName ;
+    private String password;
     private String lastName ;
     private String email ;
     private String address ;
