@@ -16,6 +16,6 @@ public class User {
     private String lastName ;
     private String email ;
     private String address ;
-    private Boolean status;
+    private String status;
 
 }

@@ -1,5 +1,6 @@
 package com.example.commongateway.security;
 
+import com.example.commongateway.register.User;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -14,7 +15,11 @@ public class CustumUserDatail implements UserDetails {
     private String email ;
     private String password;
 
-
+    public CustumUserDatail(User user){
+        this.username = user.getUsername();
+        this.email = user.getEmail();
+        this.password = user.getPassword();
+    }
     public CustumUserDatail(String username, String email, String password) {
         this.username = username;
         this.email = email;
